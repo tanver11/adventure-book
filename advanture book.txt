@@ -1,0 +1,42 @@
+name = input("Input your name ")
+print("Welcome to the adventure,",name,"!")
+print("Now you are an adventure trip.You come out from home.Choose between two direction.")
+answer = input("left or right ")
+
+
+
+if answer.lower() == 'left':
+    answer=input("There are a river ahead.you can go by swam or pass the river by passing through jungle.swam or jungle ")
+
+    if answer.lower() =="swam":
+        print("Offs! you meet with a crocodile and eaten by it.You lose")
+    elif answer.lower()=="jungle":
+
+        answer=input("You looks a stranger with a gun.You can run away from him or talk with her.(run or talk) ")
+
+        if answer.lower() =="run":
+            print("The stranger shoot you & You lose")
+        elif answer.lower() =="talk":
+            print("The stranger give you details about the road and you pass the river.You won!")
+        else:
+            print("Not a valid option.You lose")
+
+
+elif answer.lower() == 'right':
+    answer=input("There are a unknown quite dangerous village ahead.You can pass the village by walking or with a gun.(walk or gun) ")
+    if answer.lower()=="walk":
+        answer = input("They saw you & invite their house.You can accept their invitation or just ignore it.(accept or ignore) ")
+        if answer =="accept":
+            print("You lose! They mix a poison with food and you die.")
+        elif answer=="ignore":
+            print("You lose! They can't tolerate your ignorance & shoot you")
+        else:
+            print("Not a valid answer.You lose")
+    elif answer =="gun":
+        print("You lose!Villagers angry with your gun and they all attack you.You die.")
+    else:
+        print("Not a valid answer.You lose")
+else:
+    print("Not a valid answer .You loose")
+print("Game over")
+print("Thanks",name , "for your playing.")
